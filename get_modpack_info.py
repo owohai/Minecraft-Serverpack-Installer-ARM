@@ -284,7 +284,7 @@ def get_server_modpack_url(provider, modpack_id, modpack_version, operating_syst
                 if str(version["id"]) == str(modpack_version):
                     serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{modpack_version}/server/arm/{operating_system.lower()}"
 
-            urls = {"SpecifiedVersion": serverbinary_url, "LatestReleaseServerpack": "",
+            urls = {"SpecifiedVersion": "https://api.modpacks.ch/public/modpack/4/2115/server/arm/linux", "LatestReleaseServerpack": "",
                     "LatestBetaServerpack": "", "LatestAlphaServerpack": "", "LatestReleaseNonServerpack": ""}
             normal_downloadurl = ""
             return_list = [modpack_name.replace(
