@@ -282,9 +282,9 @@ def get_server_modpack_url(provider, modpack_id, modpack_version, operating_syst
         if modpack_version and modpack_version != "latest":
             for version in response["versions"]:
                 if str(version["id"]) == str(modpack_version):
-                    serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{modpack_version}/server/arm/{operating_system.lower()}"
+                    serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{modpack_version}/server/arm/linux"
 
-            urls = {"SpecifiedVersion": "https://api.modpacks.ch/public/modpack/4/2115/server/arm/linux", "LatestReleaseServerpack": "",
+            urls = {"SpecifiedVersion": serverbinary_url, "LatestReleaseServerpack": "",
                     "LatestBetaServerpack": "", "LatestAlphaServerpack": "", "LatestReleaseNonServerpack": ""}
             normal_downloadurl = ""
             return_list = [modpack_name.replace(
@@ -314,15 +314,15 @@ def get_server_modpack_url(provider, modpack_id, modpack_version, operating_syst
         find_version = True
 
         if version_id_release:
-            release_serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{version_id_release}/server/arm/{operating_system.lower()}"
+            release_serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{version_id_release}/server/arm/linux"
         else:
             release_serverbinary_url = ""
         if version_id_beta:
-            beta_serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{version_id_beta}/server/arm/{operating_system.lower()}"
+            beta_serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{version_id_beta}/server/arm/linux"
         else:
             beta_serverbinary_url = ""
         if version_id_alpha:
-            alpha_serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{version_id_alpha}/server/arm/{operating_system.lower()}"
+            alpha_serverbinary_url = f"https://api.modpacks.ch/public/modpack/{modpack_id}/{version_id_alpha}/server/arm/linux"
         else:
             alpha_serverbinary_url = ""
 
